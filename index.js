@@ -39,6 +39,10 @@ app.get("/Shirts", (req, res)=> {
   res.render('shirts');
 })
 
+app.get("/shoes", (req, res)=> {
+  res.render('Shoes');
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
