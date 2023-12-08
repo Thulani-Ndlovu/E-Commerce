@@ -31,6 +31,10 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 })
 
+app.get("/Pants", (req, res)=> {
+  res.render('pants');
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -72,6 +76,8 @@ router.get('/logout', (req, res)=> {
       }
   })
 })
+
+
 
 
 
