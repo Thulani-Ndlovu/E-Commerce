@@ -37,12 +37,12 @@ app.listen(port, () => {
 
 
 // Sign In Page
-app.get('/', (req, res) => {
+app.get('/Sign-Up', (req, res) => {
   res.render('s_base', {title : "Sign In"});
 })
 
 // Sign In User
-router.post('/signin', (req, res) => {
+router.post('/dashboard', (req, res) => {
   if(req.body.email == credentials.email && req.body.password == credentials.password) {
     req.session.user = req.body.email;
     res.redirect('dashboard');
@@ -53,7 +53,7 @@ router.post('/signin', (req, res) => {
 });
 
 //DASHBOARD ROUTE
-router.get('./views/dashboard', (req, res)=> {
+router.get('/dashboard', (req, res)=> {
   if(req.session.user) {
       res.render('dashboard', {user : req.session.user})
   }else{
