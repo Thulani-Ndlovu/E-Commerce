@@ -39,8 +39,12 @@ app.get("/Shirts", (req, res)=> {
   res.render('shirts');
 })
 
-app.get("/shoes", (req, res)=> {
-  res.render('Shoes');
+app.get("/Shoes", (req, res)=> {
+  res.render('shoes');
+})
+
+app.get("/Accessories", (req, res)=> {
+  res.render("accessories");
 })
 
 app.listen(port, () => {
