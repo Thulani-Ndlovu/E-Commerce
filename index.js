@@ -31,6 +31,30 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 })
 
+app.get("/Pants", (req, res)=> {
+  res.render('pants');
+})
+
+app.get("/Shirts", (req, res)=> {
+  res.render('shirts');
+})
+
+app.get("/Shoes", (req, res)=> {
+  res.render('shoes');
+})
+
+app.get("/Accessories", (req, res)=> {
+  res.render("accessories");
+})
+
+app.get("/Jersey", (req, res)=> {
+  res.render("Jersey");
+})
+
+app.get("/Hats", (req, res)=> {
+  res.render("Hats");
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -72,7 +96,3 @@ router.get('/logout', (req, res)=> {
       }
   })
 })
-
-
-
-//module.exports = router;
