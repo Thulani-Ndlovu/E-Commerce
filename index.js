@@ -51,6 +51,10 @@ app.get("/Jersey", (req, res)=> {
   res.render("Jersey");
 })
 
+app.get("/Hats", (req, res)=> {
+  res.render("Hats");
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
