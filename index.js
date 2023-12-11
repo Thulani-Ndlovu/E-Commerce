@@ -4,6 +4,7 @@ import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
+import nodemailer from "nodemailer";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
@@ -55,6 +56,10 @@ app.get("/Hats", (req, res)=> {
   res.render("Hats");
 })
 
+app.get("/contact", (req, res)=> {
+  res.render("contact");
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -96,3 +101,38 @@ router.get('/logout', (req, res)=> {
       }
   })
 })
+
+app.post('/contact', (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'thulani.ndlovu.54922@gmail.com',
+      pass: 'uxsf lppj ircl bewi',
+    },
+    timeout: 50000,
+  });
+
+    // Create the email options
+  const mailOptions = {
+    from: `${email}`,
+    to: 'fashionthriftsa@gmail.com',
+    subject: `${subject}`,
+    text: `${message}`,
+  };
+
+    // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error:', error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent:', info.response);
+      res.status(200).send('Email sent successfully');
+    }
+  });
+
+});
