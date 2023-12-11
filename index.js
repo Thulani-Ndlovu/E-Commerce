@@ -5,6 +5,7 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
 import nodemailer from "nodemailer";
+import 'dotenv/config';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
@@ -106,20 +107,19 @@ app.post('/contact', (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: process.env.SMTP_SECURE === 'true',
     auth: {
-      user: 'thulani.ndlovu.54922@gmail.com',
-      pass: 'uxsf lppj ircl bewi',
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
-    timeout: 50000,
+    timeout: parseInt(process.env.TIMEOUT, 10),
   });
 
-    // Create the email options
   const mailOptions = {
     from: `${email}`,
-    to: 'fashionthriftsa@gmail.com',
+    to: process.env.EMAIL_TO,
     subject: `${subject}`,
     text: `${message}`,
   };
