@@ -12,7 +12,7 @@
             </div>
             <% } %>
         </div>
-        <form action="/signin" method="POST" class="pt-3">
+        <form action="/s_base" method="POST" class="pt-3">
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="email" name="email">
                 <small class="form-text text-muted text-left">Registered email address</small>
@@ -21,8 +21,9 @@
                 <input type="password" class="form-control" placeholder="password" name="password">
             </div>
             <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+            <a href="/dashboard"><button type="button" class="btn btn-success rounded-pill">Register</button></a>
         </form>
     </div>
 </div>
 
-<%- include ("footer") -%>    
+<%- include ("s_footer") -%>    
