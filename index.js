@@ -4,6 +4,8 @@ import path from "path";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import session from 'express-session';
+import nodemailer from "nodemailer";
+import 'dotenv/config';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
@@ -55,6 +57,10 @@ app.get("/Hats", (req, res)=> {
   res.render("Hats");
 })
 
+app.get("/contact", (req, res)=> {
+  res.render("contact");
+})
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
@@ -96,3 +102,37 @@ router.get('/logout', (req, res)=> {
       }
   })
 })
+
+app.post('/contact', (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+    timeout: parseInt(process.env.TIMEOUT, 10),
+  });
+
+  const mailOptions = {
+    from: `${email}`,
+    to: process.env.EMAIL_TO,
+    subject: `${subject}`,
+    text: `${message}`,
+  };
+
+    // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error:', error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent:', info.response);
+      res.status(200).send('Email sent successfully');
+    }
+  });
+
+});
