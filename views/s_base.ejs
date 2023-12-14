@@ -1,5 +1,5 @@
 
-<%- include ("s_header") -%>
+<%- include ("s_header.ejs") -%>
 
 <div class="text-center center-div" id="signin">
     <div class="container w-25 border py-5">
@@ -12,7 +12,7 @@
             </div>
             <% } %>
         </div>
-        <form action="/signin" method="POST" class="pt-3">
+        <form action="/s_base" method="POST" class="pt-3">
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="email" name="email">
                 <small class="form-text text-muted text-left">Registered email address</small>
@@ -25,4 +25,4 @@
     </div>
 </div>
 
-<%- include ("footer") -%>    
+<%- include ("partials/footer.ejs") -%>    

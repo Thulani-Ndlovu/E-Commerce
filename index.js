@@ -13,11 +13,6 @@ const app = express();
 const port = 3000;
 const router = express.Router();
 
-const credentials = {
-  email: "adminUser1@gmail.com",
-  password: "admin123",
-};
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Set the views directory
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,6 +24,7 @@ app.get("/", (req, res) => {
   res.render("home");
 })
 
+// Render the categories pages
 app.get("/contact", (req, res) => {
     res.render("contact");
 })
@@ -67,42 +63,27 @@ app.listen(port, () => {
 
 
 // Sign In Page
-app.get('/Sign-Up', (req, res) => {
-  res.render('s_base', {title : "Sign In"});
+app.get('/s_base', (req, res) => {
+  //res.render('s_base', {title : "Sign In"});
+  res.render('s_base');
 })
 
 // Sign In User
-router.post('/dashboard', (req, res) => {
-  if(req.body.email == credentials.email && req.body.password == credentials.password) {
-    req.session.user = req.body.email;
-    res.redirect('dashboard');
-    res.end("Sign In complete");
+app.post('/s_base', (req, res) => {
+  if(req.body.email === process.env.LOGIN_EMAIL && req.body.password === process.env.LOGIN_PASS) {
+    res.render('dashboard');
   }else{
-    res.end("Incorrect Username")
+    res.render("s_base");
   }
 });
 
-//DASHBOARD ROUTE
-router.get('/dashboard', (req, res)=> {
-  if(req.session.user) {
-      res.render('dashboard', {user : req.session.user})
-  }else{
-      res.send('Unknown User')
-  }
+//Logout from user account
+app.get('/home', (req, res)=> {
+
+  res.render("home");
 })
 
-//LOGOUT ROUTE
-router.get('/logout', (req, res)=> {
-  req.session.destroy(function(err){
-      if(err){
-          console.log(err);
-          res.send("Error")
-      }else{
-          res.render('base', {title: "Express", logout: "Logout Successfully"})
-      }
-  })
-})
-
+// Contact Page handler
 app.post('/contact', (req, res) => {
   const { name, email, subject, message } = req.body;
 

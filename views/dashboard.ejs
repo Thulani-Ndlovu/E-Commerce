@@ -1,11 +1,11 @@
-<%- include('header') -%>
+<%- include('partials/dashboard_header.ejs') -%>
 
 <div class="text-center center-div mt-5" id="signin">
     <div class="container w-25 border py-5 mt-5">
         <h3>Welcome to the Dashboard</h3>
         <h5><%= locals.user ? user: "User" %></h5>
-        <a href="/logout">Sign Out</a>
+        <a href="/home">Sign Out</a>
     </div>
 </div>
 
-<%- include('footer') -%>
+<%- include('partials/footer.ejs') -%>
