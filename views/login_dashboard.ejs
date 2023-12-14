@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the user shop </title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100px;
+            height: auto;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Available items for you</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Size</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows go here -->
+            <tr>
+                <td><img src="public/images/T-Shirts/Blue T.jpeg" alt="Blue Men T-shirt"></td>
+                <td>Men T-shirt</td>
+                <td>Plain Blue T-shirt for Men</td>
+                <td>R40</td>
+                <td>30</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+                </tr>
+
+            <tr>
+                <td><img src="public/images/T-Shirts/Ladies T-Shirt White.jpeg" alt="Women T-shirt"></td>
+                <td>Women T-shirt</td>
+                <td>White T-shirt</td>
+                <td>R120</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/T-Shirt/Strong Black Woman Afro Wrods.jpg" alt="Women T-shirt"></td>
+                <td>Women T-shirt</td>
+                <td>Black colourful T-shirt</td>
+                <td>R100</td>
+                <td>15</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/T-Shirt/NorthFace.jpeg" alt="Unisex T-shirt"></td>
+                <td>NorthFace T-shirt</td>
+                <td>White T-shirt</td>
+                <td>R150</td>
+                <td>30</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/T-Shirt/Reebok.jpeg" alt="Unisex T-shirt"></td>
+                <td>Reebok T-shirt</td>
+                <td>Navy Blue T-shirt</td>
+                <td>R60</td>
+                <td>40</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shirts/Black Plain cutaway.webp" alt="Men Shirt"></td>
+                <td>Black Cutaway Shirt</td>
+                <td>Men Shirt</td>
+                <td>R120</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shirt/Long-sleeve Lightblue.webp" alt="Men Shirt"></td>
+                <td>Lightblue Shirt</td>
+                <td>Men Shirt</td>
+                <td>R100</td>
+                <td>10</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shirt/Mens Long Sleeve Haiden Shirt-Light Blue.jpeg" alt="Men Shirt"></td>
+                <td>Haiden Shirt</td>
+                <td>Man Shirt</td>
+                <td>R110</td>
+                <td>15</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shirt/MKM Black Smart Slim Fit Shirt.jpeg" alt="Mens Shirt"></td>
+                <td>Black Slim Fit Shirt</td>
+                <td>Man Shirt</td>
+                <td>R120</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/6_Daiwa-Cargo-Quick-Dry-Long-Pants_Grey.jpeg" alt="Men's Pants"></td>
+                <td>Cargo Pants</td>
+                <td>Men's Dry-Quick Pants</td>
+                <td>R200</td>
+                <td>30</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/0012989_mens-jeans_1024.jpeg" alt="Men's Pants"></td>
+                <td>Men's Denim</td>
+                <td>Blue Jeans</td>
+                <td>R120</td>
+                <td>40</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/Men's Grey Acid Wash Ripped Skinny Jeans.jpeg" alt="Men's Pants"></td>
+                <td>Men's Skinny Jeans</td>
+                <td>Grey Ripped Skinny Jeans</td>
+                <td>R150</td>
+                <td>35</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/Men's TS Dri-Tech Ultra Pace Navy Shorts.jpeg" alt="Men's Short"></td>
+                <td>Men's Shorts</td>
+                <td>Dri-Tech Navy Shorts</td>
+                <td>R70</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/adidas Originals Unisex Youth Camo Tan Shorts.jpeg" alt="Unisex Shorts"></td>
+                <td>Adidas Unisex Shorts</td>
+                <td>Unisex Camo Tan Shorts</td>
+                <td>R110</td>
+                <td>30</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/Adjustable-Cargo-Pants_Putty-FT-min.webp" alt="Men's Pants"></td>
+                <td>Men's Pants</td>
+                <td>Adjustable Puffy Cargo Pants</td>
+                <td>R200</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/Adjustable-Cargo-Pants_Rust-FT.webp" alt="Men's Pants"></td>
+                <td>Men's Pants</td>
+                <td>Adjustable Rust Cargo Pants</td>
+                <td>R200</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/SARA-Tailored-Wide-Leg-Pant.webp" alt="Women's Pants"></td>
+                <td>Women's Pants</td>
+                <td>SARA Tailored Wide Leg Pants</td>
+                <td>R90</td>
+                <td>15</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Pants/Older Girl's Mid Blue Skinny Jeans.jpeg" alt="Women's Jeans"></td>
+                <td>Women's Jeans</td>
+                <td>Blue Skinny Jeans</td>
+                <td>R80</td>
+                <td>40</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Black Handbag.jpeg" alt="Women's Handbag"></td>
+                <td>Black Handbag</td>
+                <td>Women's Leather Handbag</td>
+                <td>R450</td>
+                <td>50</td>
+                <td>Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/jeep-buluo-man-leather-messenger-bag-male-cross-body-shoulder-business-bags-for-men-500x500.webp" alt="men's Handbag"></td>
+                <td>Men's Handbag</td>
+                <td>Jeep Leather Handbag</td>
+                <td>R800</td>
+                <td>40</td>
+                <td>Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Pink Flap Over Purse 06.05.07.webp" alt="Women's Handbag"></td>
+                <td>Women's Handbag</td>
+                <td>Pink Flap Over Purse</td>
+                <td>R200</td>
+                <td>40</td>
+                <td>Small</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Casio Retro Digital Silver Tone Stainless Steel Watch.jpeg" alt="Watch"></td>
+                <td>Casio Watch</td>
+                <td>Digital Retro Silver Tone Stainless Steel Watch</td>
+                <td>R850</td>
+                <td>60</td>
+                <td>Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Men Tempo Silver Watch.jpeg" alt="Men's Watch"></td>
+                <td>Men's Watch</td>
+                <td>Silver Tempo Analog Watch</td>
+                <td>R500</td>
+                <td>30</td>
+                <td>Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Daniel Klein Rose Plated Dusty Pink Leather Watch.jpeg" alt="Women's Watch"></td>
+                <td>Women's Watch</td>
+                <td>Daniel Klein Pink Rose Plated Leather Watch</td>
+                <td>R700</td>
+                <td>50</td>
+                <td>Small</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Diamante Rimless Sunglasses.jpeg" alt="Women's Sunglesses"></td>
+                <td>Women's Sunglasses</td>
+                <td>Diamante Rimless</td>
+                <td>R100</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/MKM Black Carrera Sunglasses.jpeg" alt="Men's Sunglasses"></td>
+                <td>Men's Sunglasses</td>
+                <td>MKM Black Carrera</td>
+                <td>R250</td>
+                <td>20</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Accessories/Women's Pink Square Sunglasses.jpeg" alt="Women's Sunglasses"></td>
+                <td>Women's Sunglasses</td>
+                <td>Pink Square</td>
+                <td>R70</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Ladies University W Zip lace up sneaker.jpeg" alt="Women's Shoes"></td>
+                <td>Women's Sneakers</td>
+                <td>White Zip lace-up Sneakers</td>
+                <td>R250</td>
+                <td>30</td>
+                <td>4, 5, 6, 7, 8 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Men's adidas VS Pace Grey-Black Sneakers.jpeg" alt="Men's Shoes"></td>
+                <td>Men's Sneakers</td>
+                <td>Adidas VS Pace Grey-Black</td>
+                <td>R400</td>
+                <td>20</td>
+                <td>6, 7, 8, 9, 10, 11, 12 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Men's Field Speed lace up sneakers.jpeg" alt="Men's Shoes"></td>
+                <td>Men's Sneakers</td>
+                <td>Feild Speed Lace-up</td>
+                <td>R350</td>
+                <td>30</td>
+                <td>7, 8, 9, 10, 11, 12 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Men's Markham Court Black Sneaker.jpeg" alt="Men's Shoes"></td>
+                <td>Men's Sneakers</td>
+                <td>Black Court Sneaker</td>
+                <td>R150</td>
+                <td>30</td>
+                <td>6, 7, 8, 9, 10, 11, 12 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/STEVEMADDEN-SHOES_POSSESSION_BLACK-1_grande.webp" alt="Women's Shoes"></td>
+                <td>Women's Sneakers</td>
+                <td>Steve Madden Possession Black</td>
+                <td>R150</td>
+                <td>40</td>
+                <td>4, 5, 6, 7, 8, 9, 10 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Best-Shoes-Women-2020.webp" alt="Women's Shoes"></td>
+                <td>Women's Shoes</td>
+                <td>Strappy Mule Pink</td>
+                <td>R120</td>
+                <td>40</td>
+                <td>3, 4, 5, 6, 7, 8, 9 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/Best-Womens-Office-Shoes-Include-Coach-Classic-Penny-Loafers.jpeg" alt="Women's Shoes"></td>
+                <td>Women's Shoes</td>
+                <td>Black Classic Penny-Loafers</td>
+                <td>R150</td>
+                <td>30</td>
+                <td>4, 5, 6, 7, 8, 9 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/sl-168-nbpk-16604019695.jpeg" alt="Women's Shoes"></td>
+                <td>Women's Sneakers</td>
+                <td>Sport Running Shoes</td>
+                <td>R100</td>
+                <td>20</td>
+                <td>4, 5, 6, 7, 8, 9 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Shoes/sub-buzz-8256-1663029182-10.webp" alt="Women's Shoes"></td>
+                <td>Women's Shoes</td>
+                <td>Black Leather Loafers</td>
+                <td>R300</td>
+                <td>20</td>
+                <td>3, 4, 5, 6, 7, 8, 9 (UK)</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Boy's Green Bucket Hat.jpeg" alt="Men's Hats"></td>
+                <td>Men's Hat</td>
+                <td>Green Bucket Hats</td>
+                <td>R120</td>
+                <td>20</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Girl's Blue Tropical Print Reversible Bucket Hat.jpeg" alt="Women's Hats"></td>
+                <td>Women's Hat</td>
+                <td>Blue Tropical Print Bucket Hat</td>
+                <td>R150</td>
+                <td>20</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Girl's Pink Unicorn Print Bucket Hat.jpeg" alt="Women's Hats"></td>
+                <td>Women's Hat</td>
+                <td>Pink Unicorn Print Bucket Hat</td>
+                <td>R160</td>
+                <td>20</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Men's Markham Pocket Fatigue Peak Cap.jpeg" alt="Men's Caps"></td>
+                <td>Men's Cap</td>
+                <td>Pocket Fatigue Peak</td>
+                <td>R200</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Men's Union-DNM Twill 6 Panel Navy Cap.jpeg" alt="Men's Caps"></td>
+                <td>Men's Cap</td>
+                <td>Navy Union-DNM Twill-6</td>
+                <td>R200</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/MKM Black Moulded Canvas Fedora Hat.jpeg" alt="Men's Hats"></td>
+                <td>Men's Hat</td>
+                <td>Moulded Canvas Fedora</td>
+                <td>R250</td>
+                <td>15</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/MKM Panelled Boonie Black Hat.jpeg" alt="Men's Hats"></td>
+                <td>Men's Hat</td>
+                <td>Black Panelled Boonie</td>
+                <td>R120</td>
+                <td>20</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/Nike Unisex Dri-FIT Club Unstructured Metal Swoosh Pink Cap.jpeg" alt="Unisex Cap"></td>
+                <td>Unisex Cap</td>
+                <td>Nike Pink Dri-FIT Swoosh</td>
+                <td>R450</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hats/TS 5-panel White Running Cap.jpeg" alt="Unisex Cap"></td>
+                <td>Unisex Cap</td>
+                <td>White TS 5-Panel Running</td>
+                <td>R180</td>
+                <td>30</td>
+                <td>Small, Medium</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Full sleeve Stylis cat Print hoodies.webp" alt="Women's Hoodies"></td>
+                <td>Women's Jersey</td>
+                <td>Cat Print Pink Hoodie</td>
+                <td>R350</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/G-Star Men's Cargo Olive Sweater.jpeg" alt="Men's Sweater"></td>
+                <td>Men's Sweater</td>
+                <td>G-Star Olive Cargo</td>
+                <td>R450</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Men's Vans Hoodie - Black.jpeg" alt="Men's Hoodie"></td>
+                <td>Men's Hoodie</td>
+                <td>Black Vans Hoodie</td>
+                <td>R500</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Mens First Ascent Black Stormfleece jacket.jpeg" alt="Men's Jacket"></td>
+                <td>Men's Jacket</td>
+                <td>First Ascent Black Stormfleece</td>
+                <td>R300</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Mens TS Black SA Supporter Hoodie.jpeg" alt="Men's Hoodies"></td>
+                <td>Men's Hoodie</td>
+                <td>TS Black SA Supporter</td>
+                <td>R350</td>
+                <td>30</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Reebok Men's Classics Brand Proud Ecru Hoodie.jpeg" alt="Men's Hoodie"></td>
+                <td>Men's Hoodie</td>
+                <td>Classic Reebok</td>
+                <td>R450</td>
+                <td>15</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Women Hoodies - Grey.jpeg" alt="Women's Hoodie"></td>
+                <td>Women's Hoodie</td>
+                <td>Grey Plain</td>
+                <td>R250</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Women Pink Hoodies.jpeg" alt="Women's Hoodie"></td>
+                <td>Women's Hoodie</td>
+                <td>Stylish Pink</td>
+                <td>R270</td>
+                <td>25</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+
+            <tr>
+                <td><img src="public/images/Hoodies & Sweaters/Women's TS Borg 1-4 Zip Stone Sweat.jpeg" alt="Women's Sweater"></td>
+                <td>Women's Sweater</td>
+                <td>White TS Borg</td>
+                <td>R120</td>
+                <td>20</td>
+                <td>Small, Medium, Large</td>
+                <td><button>Add To Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
