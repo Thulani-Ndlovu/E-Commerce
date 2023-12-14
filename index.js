@@ -71,7 +71,7 @@ app.get('/s_base', (req, res) => {
 // Sign In User
 app.post('/s_base', (req, res) => {
   if(req.body.email === process.env.LOGIN_EMAIL && req.body.password === process.env.LOGIN_PASS) {
-    res.render('dashboard');
+    res.render('login_dashboard');
   }else{
     res.render("s_base");
   }
