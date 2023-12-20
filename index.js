@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); //step 2
 
 
-// step 1: rendering the homepage
+// Render the homepage
 app.get("/", (req, res) => {
   res.render("home");
 })
@@ -31,30 +31,37 @@ app.get("/contact", (req, res) => {
     res.render("contact");
 })
 
+// render the pants category page
 app.get("/Pants", (req, res)=> {
   res.render('pants');
 })
 
+// Render the shirts category page
 app.get("/Shirts", (req, res)=> {
   res.render('shirts');
 })
 
+// Render the shoes category page
 app.get("/Shoes", (req, res)=> {
   res.render('shoes');
 })
 
+// Render the Accessories category page
 app.get("/Accessories", (req, res)=> {
   res.render("accessories");
 })
 
+// Render the Jersey category page
 app.get("/Jersey", (req, res)=> {
   res.render("Jersey");
 })
 
+// Render the hats category page
 app.get("/Hats", (req, res)=> {
   res.render("Hats");
 })
 
+// Render the contact Us Page
 app.get("/contact", (req, res)=> {
   res.render("contact");
 })
@@ -148,11 +155,12 @@ app.post('/contact', (req, res) => {
 
 });
 
+// Render the sign up page
 app.get('/signup', (req, res) => {
-  //res.render('s_base', {title : "Sign In"});
   res.render('signup');
 })
 
+// Make a Post request to sign in the user
 app.post('/signup', async(req, res)=> {
   const saltRounds = 10;
   const hashedAdminPass = bcrypt.hashSync(req.body.password, saltRounds);
